@@ -34,10 +34,10 @@ def self_activate(x):
     return 0.5*x
 
 # Adding the input layer and the first hidden layer
-regressor.add(Dense(output_dim = 9, init = "uniform", activation = "sigmoid", input_dim = 3))
+regressor.add(Dense(input_dim = 3, output_dim = 9, init = "uniform", activation = lambda x : x**2))
 
 # Adding the output layer
-regressor.add(Dense(output_dim = 2, init = "uniform", activation = "sigmoid"))
+regressor.add(Dense(output_dim = 2, init = "uniform", activation = lambda x: x))
 
 # Compiling the model
 regressor.compile(optimizer = "adam", loss = "mse", metrics = ["accuracy"])
