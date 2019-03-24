@@ -1,0 +1,1 @@
+[Day 1 - First Weird Model](DAY_01.md)
